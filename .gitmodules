@@ -1,3 +1,9 @@
 [submodule "keys"]
 	path = keys
 	url = git@github.com:201created/keys.git
+[submodule "ansible/roles/geerlingguy.java"]
+	path = ansible/roles/geerlingguy.java
+	url = git@github.com:geerlingguy/ansible-role-java.git
+[submodule "ansible/roles/geerlingguy.jenkins"]
+	path = ansible/roles/geerlingguy.jenkins
+	url = git@github.com:geerlingguy/ansible-role-jenkins.git

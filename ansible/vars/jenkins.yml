@@ -1,0 +1,6 @@
+---
+jenkins_user: jenkins
+
+# latest version doesn't yet work with ansible role, so choose debian-stable
+jenkins_repo_url: deb http://pkg.jenkins-ci.org/debian-stable binary/
+jenkins_repo_key_url: http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key
