@@ -61,6 +61,10 @@ created this repository):
     # and give it permission to access the repositories you are using
     ssh-keygen -b 4096 -f keys/jenkins_rsa
 
+    # fill out missing values for the Jenkins Slack integration
+    cp sample_slack.vars.yml keys/slack.vars.yml
+    ${EDITOR} keys/slack.vars.yml
+
 
 ## Set stuff up
 

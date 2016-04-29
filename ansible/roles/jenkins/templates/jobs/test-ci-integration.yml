@@ -16,8 +16,26 @@
     -   shell:
             cmd: sh test.sh
 
+    properties:
+    -   slack:
+            notify-start: yes
+            notify-success: yes
+            notify-aborted: yes
+            notify-notbuilt: yes
+            notify-unstable: yes
+            notify-failure: yes
+            notify-backtonormal: yes
+            notify-repeatedfailure: yes
+            include-test-summary: yes
+            show-commit-list: yes
+            room: '#testing'
+
     publishers:
     -   github-notifier
+    -   slack:
+            team-domain: {{slack_domain}}
+            auth-token: {{slack_auth_token}}
+            build-server-url: {{ci_server_url}}
 
 -   job:
     name: test-ci-integrations-prs
@@ -38,5 +56,20 @@
     -   shell:
             cmd: sh test.sh
 
+    properties:
+    -   slack:
+            notify-start: yes
+            notify-success: yes
+            notify-aborted: yes
+            notify-notbuilt: yes
+            notify-unstable: yes
+            notify-failure: yes
+            notify-backtonormal: yes
+            notify-repeatedfailure: yes
+            include-test-summary: yes
+            show-commit-list: yes
+            room: '#testing'
+
     publishers:
     -   github-notifier
+    -   slack

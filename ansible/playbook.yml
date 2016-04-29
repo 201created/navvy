@@ -6,6 +6,7 @@
 
     vars_files:
     -   vars/jenkins.yml
+    -   vars/slack.vars.yml
 
     roles:
     -   geerlingguy.java

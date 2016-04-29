@@ -1,0 +1,3 @@
+slack_domain: FILL ME OUT
+slack_auth_token: FILL ME OUT
+ci_server_url: 'http://ci.201apps.net:8080'
