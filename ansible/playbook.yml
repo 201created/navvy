@@ -10,3 +10,5 @@
     roles:
     -   geerlingguy.java
     -   geerlingguy.jenkins
+    -   openstack.jenkins-job-builder
+    -   jenkins

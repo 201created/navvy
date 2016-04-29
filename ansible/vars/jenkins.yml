@@ -1,6 +1,18 @@
 ---
 jenkins_user: jenkins
+jenkins_plugins:
+-   git
+-   github
 
 # latest version doesn't yet work with ansible role, so choose debian-stable
 jenkins_repo_url: deb http://pkg.jenkins-ci.org/debian-stable binary/
 jenkins_repo_key_url: http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key
+
+# if JJB is owned by root, updating jobs fails
+jenkins_job_builder_config_jenkins_url: http://localhost:8080
+jenkins_job_builder_file_jobs_src: ''
+jenkins_job_builder_user_name: '{{ jenkins_user }}'
+jenkins_job_builder_user_group: '{{ jenkins_user }}'
+jenkins_job_builder_file_jobs_group: '{{ jenkins_user }}'
+jenkins_job_builder_file_jobs_owner: '{{ jenkins_user }}'
+jenkins_job_builder_install_method: 'pip'

@@ -1,0 +1,42 @@
+-   job:
+    name: test-ci-integrations
+    display-name: 'CI Integrations Playground'
+
+    scm:
+    -   git:
+            url: git@github.com:201created/test-ci-integrations.git
+            branches:
+            -   origin/master
+
+    triggers:
+    -   github
+
+    builders:
+    -   github-notifier
+    -   shell:
+            cmd: sh test.sh
+
+    publishers:
+    -   github-notifier
+
+-   job:
+    name: test-ci-integrations-prs
+    display-name: 'CI Integrations Playground Pull Requests'
+
+    scm:
+    -   git:
+            url: git@github.com:201created/test-ci-integrations.git
+            choosing-strategy: inverse
+            branches:
+                -   origin/master
+
+    triggers:
+    -   github
+
+    builders:
+    -   github-notifier
+    -   shell:
+            cmd: sh test.sh
+
+    publishers:
+    -   github-notifier

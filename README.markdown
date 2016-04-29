@@ -56,6 +56,11 @@ created this repository):
     ssh-keygen -b 4096 -f keys/id_rsa
     ssh-add keys/id_rsa
 
+    # create a separate SSH key for jenkins to access GitHub;
+    # then create a new account on GitHub, upload this key to it,
+    # and give it permission to access the repositories you are using
+    ssh-keygen -b 4096 -f keys/jenkins_rsa
+
 
 ## Set stuff up
 

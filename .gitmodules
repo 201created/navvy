@@ -7,3 +7,6 @@
 [submodule "ansible/roles/geerlingguy.jenkins"]
 	path = ansible/roles/geerlingguy.jenkins
 	url = git@github.com:geerlingguy/ansible-role-jenkins.git
+[submodule "ansible/roles/openstack.jenkins-job-builder"]
+	path = ansible/roles/openstack.jenkins-job-builder
+	url = git://git.openstack.org/openstack/ansible-role-jenkins-job-builder
